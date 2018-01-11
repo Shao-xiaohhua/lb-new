@@ -38,7 +38,7 @@
         opacity: 1;
     }
     .body div.anm, .body div.active {
-        transition: left .3s linear;
+        transition: left .5s linear;
     }
     .body div:nth-child(1) {
         background: red;
@@ -141,6 +141,13 @@
                 console.log(bx + '上一个');
             }
             document.querySelector('body').addEventListener('click', click);
+        }
+        var _script = document.createElement('script');
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(_script);
+        _script.src = 'http://12348.justice.gov.cn/service/rest/orgstruct.Map/collection/mapgroupdata?jsonp=jsonp';
+        var jsonp = function (data) {
+            console.log(data);
         }
     </script>
 </body>
